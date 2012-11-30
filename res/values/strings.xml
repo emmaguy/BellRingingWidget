@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Bell Widget</string>
+    <string name="bell2">imgBell2</string>
+    <string name="bell1">imgBell1</string>
+</resources>
