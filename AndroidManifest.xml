@@ -3,7 +3,9 @@
           package="dev.emmaguy.bell"
           android:versionCode="1"
           android:versionName="1.0">
-    <uses-sdk android:minSdkVersion="8" android:targetSdkVersion="8"/>
+    
+    <uses-sdk android:minSdkVersion="8" android:targetSdkVersion="16"/>
+    
     <application android:icon="@drawable/bell1" android:label="Bell Ringing Widget" android:allowBackup="true">
         <receiver android:name="BellWidgetProvider" android:label="Bell Ringing Widget">
             <intent-filter>
