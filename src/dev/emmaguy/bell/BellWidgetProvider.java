@@ -3,7 +3,6 @@ package dev.emmaguy.bell;
 import android.app.PendingIntent;
 import android.appwidget.AppWidgetManager;
 import android.appwidget.AppWidgetProvider;
-import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.media.MediaPlayer;
@@ -13,7 +12,6 @@ import android.widget.RemoteViews;
 
 public class BellWidgetProvider extends AppWidgetProvider
 {
-    private int _counter = 1;
     @Override
     public void onUpdate(Context context, AppWidgetManager appWidgetManager, int[] appWidgetIds)
     {
@@ -50,16 +48,17 @@ public class BellWidgetProvider extends AppWidgetProvider
                     mPlay.setLooping(true);
                     mPlay.start();
 
-                    UpdateBellImage(context, widgetId, remoteViews, R.drawable.bell2);
-                    UpdateBellImage(context, widgetId, remoteViews, R.drawable.bell3);
-                    UpdateBellImage(context, widgetId, remoteViews, R.drawable.bell4);
-                    UpdateBellImage(context, widgetId, remoteViews, R.drawable.bell5);
-                    UpdateBellImage(context, widgetId, remoteViews, R.drawable.bell6);
-                    UpdateBellImage(context, widgetId, remoteViews, R.drawable.bell7);
-                    UpdateBellImage(context, widgetId, remoteViews, R.drawable.bell8);
-                    UpdateBellImage(context, widgetId, remoteViews, R.drawable.bell1);
+                    updateBellImage(context, widgetId, remoteViews, R.drawable.bell2);
+                    updateBellImage(context, widgetId, remoteViews, R.drawable.bell3);
+                    updateBellImage(context, widgetId, remoteViews, R.drawable.bell4);
+                    updateBellImage(context, widgetId, remoteViews, R.drawable.bell5);
+                    updateBellImage(context, widgetId, remoteViews, R.drawable.bell6);
+                    updateBellImage(context, widgetId, remoteViews, R.drawable.bell7);
+                    updateBellImage(context, widgetId, remoteViews, R.drawable.bell8);
+                    updateBellImage(context, widgetId, remoteViews, R.drawable.bell1);
 
                     mPlay.stop();
+                    mPlay.release();
                 }
                 catch (Exception e)
                 {
@@ -79,7 +78,7 @@ public class BellWidgetProvider extends AppWidgetProvider
         }
     }
 
-    private void UpdateBellImage(Context context, int widgetId, RemoteViews remoteViews, int bellId) throws InterruptedException
+    private void updateBellImage(Context context, int widgetId, RemoteViews remoteViews, int bellId) throws InterruptedException
     {
         remoteViews.setImageViewResource(R.id.imageView, bellId);
         AppWidgetManager.getInstance(context).updateAppWidget(widgetId,  remoteViews);
