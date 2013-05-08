@@ -25,7 +25,7 @@ public class BellWidgetProvider extends AppWidgetProvider
             // use appWidgetId as unique id to create broadcast as android reuses Intents
             // and otherwise all instances would be triggered
             PendingIntent pendingIntent = PendingIntent.getBroadcast(context, appWidgetId, clickIntent, 0);
-            views.setOnClickPendingIntent(R.id.linearLayout, pendingIntent);
+            views.setOnClickPendingIntent(R.id.imageView, pendingIntent);
 
             appWidgetManager.updateAppWidget(appWidgetId, views);
         }

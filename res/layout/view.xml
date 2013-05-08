@@ -1,13 +1,7 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:layout_height="64dp"
-              android:layout_width="64dp"
-              android:id="@+id/linearLayout">
-
-    <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+    <ImageView xmlns:android="http://schemas.android.com/apk/res/android"
+        	android:id="@+id/imageView"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
             android:src="@drawable/bell1"
             android:scaleType="fitXY"
             android:contentDescription="@string/bell1"/>
-</LinearLayout>
